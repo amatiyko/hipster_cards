@@ -1,0 +1,600 @@
+body {
+    height: 100vh;
+    background: #292A2E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #292A2E, #4E5158);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #292A2E, #4E5158); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-top: 60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 15.4px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 20.8px;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+}
+/*Filter*/
+
+.filter-group {
+    margin-bottom: 60px;
+}
+
+.filter-btn {
+    display: inline-block;
+    color: white;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.active {
+    position: relative;
+}
+.active:after, .filter-btn:after {
+    position: absolute;
+    content: '';
+    bottom: -5px;
+    border-top: 2px solid white;
+}
+.active:after {
+    width: 100%;
+    left: 0%;
+}
+.filter-btn:hover:after {
+    animation: filter-underline 1s ease-in-out forwards;
+}
+
+@keyframes filter-underline {
+    from {
+        width: 0;
+        left: 50%
+    }
+    to {
+        width: 100%;
+        left: 0;
+    }
+}
+
+
+
+/*Genetal card styles*/
+.card-box {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.card {
+    border-radius: 5px;
+    box-shadow: 0 0 40px 4px #000000;
+    margin-bottom: 40px;
+}
+
+.card-with-border {
+    position: relative;
+}
+.card-with-border:after {
+    position: absolute;
+    display: block;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    content: "";
+    top: 5px;
+    left: 5px;
+    border: 1px solid white;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.header {
+    height: 55%;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    position: relative;
+}
+
+.description {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    padding: 5px 10px 5px 10px;
+}
+
+.filter {
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.45);
+    box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,.8);
+    transition-duration: 1s;
+}
+
+.card:hover .filter {
+    background-color: rgba(0,0,0,.6);
+}
+
+.content {
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.read-more {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.66);
+}
+
+.read-more-btn {
+    width: 50%;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: rgb(154,154,154);
+    background-color: white;
+    border-radius: 50px;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+
+/*Social line*/
+.social, .two-social-links, .three-social-links, .four-social-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+}
+.social.two-social-links div {
+    width: 50%;
+}
+.social.three-social-links div {
+    width: 33.333333333%;
+}
+.social.four-social-links div {
+    width: 25%;
+}
+.social div {
+    border-right: 1px solid #dddddd;
+}
+.social div:last-child {
+    border: none;
+}
+.social div a {
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.social div a:hover {
+    background-color: #dddddd;
+}
+
+.facebook-link a {
+    color: #3b5998
+}
+.tweeter-link a {
+    color: #00aced;
+}
+
+.pinterest-link a {
+    color: #C92228;
+}
+.google-plus-link a {
+    color: #d34836;
+}
+
+.quote, .note , .news, .info-card, .shop-card  {
+    border-radius: inherit;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+
+}
+.quote:before, .note:before, .news:before, .info-card:before, .shop-card:before {
+    border-radius: inherit;
+    content: '';
+    display: block;
+
+}
+
+/*Quotes*/
+.quote:before {
+    padding-top: 100%;
+}
+
+.quote .content {
+    padding: 55px 65px;
+    text-align: center;
+}
+.quote p, .quote span {
+    color: rgb(255, 255, 255);
+}
+.quote p {
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+.quote span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+}
+
+.hipster-quote {
+    font-family: "Playfair Display", Raleway, "Helvetica Neue", Arial, sans-serif;
+    background: #777777;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(135deg, #777777, #424242);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(135deg, #777777, #424242); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.not-a-hipster-quote {
+    background-image: url("../img/lifestyle-9.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+.not-a-hipster-quote p {
+    font-weight: 400;
+}
+
+.music {
+    background-image: url("../img/music-3.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.music>.filter {
+    background-color: rgba(182,39,33,.7);
+    z-index: 1000;
+    box-shadow: none;
+}
+.card:hover .music>.filter {
+    background-color: rgba(182,39,33,.9);
+}
+.music .content {
+    z-index: 1001;
+}
+.music .content p {
+    font-weight: 400;
+}
+.music .content span {
+    font-weight: 100;
+}
+
+
+/*News card*/
+.news:before {
+    padding-top: 170%;
+}
+
+.news:hover .read-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news .description {
+    background-color: white;
+}
+
+.news .description h2 {
+    font-family: "Playfair Display", Raleway, "Helvetica Neue", Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    margin-top: 10px;
+}
+.news .description h4 {
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    color: rgb(154, 154, 154);
+    margin-top: 15px;
+}
+.news .description p {
+    color: rgb(154, 154, 154);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+/*barbet news*/
+.barber .header {
+    background-image: url("../img/lifestyle-8.jpg");
+    background-size: cover;
+}
+/*beard news*/
+.beard .header {
+    background-image: url("../img/beard-1.jpg");
+    background-size: cover;
+}
+.news .social, .news .three-social-links {
+    display: flex;
+}
+.news .social div a {
+    background-color: rgba(255,255,255, .9);
+    border-bottom: 1px solid #dddddd;
+}
+.news .social div a:hover {
+     background-color: rgba(255,255,255, 1);
+ }
+/*apartment news*/
+.apartment .header {
+    background-image: url("../img/home-1.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+.apartment .description {
+    background: #777777;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(135deg, #777777, #424242);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(135deg, #777777, #424242);
+}
+.apartment .description h4, .apartment .description h2, .apartment .description p {
+    color: white;
+}
+.apartment .social {
+    display: none;
+}
+.apartment .social a {
+    color: #8a8a8a;
+    font-size: 13px;
+    font-weight: 300;
+}
+.apartment:hover .social {
+    display: flex;
+}
+
+
+    /*INFO card*/
+.info-card:before {
+    padding-top: 180%;
+}
+
+.info-card .description p {
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.info-card .description h2 {
+    font-family: "Playfair Display", Raleway, "Helvetica Neue", Arial, sans-serif;
+    color: white;
+    margin-top: 10px;
+}
+
+.tag {
+    color: white;
+    margin: 15px;
+    border-radius: 2px;
+    width: auto;
+    padding: 7px 20px;
+    display: inline-block;
+}
+
+.info-with-social:hover .social {
+    display: flex;
+}
+
+
+.variant-1 {
+    background-image: url("../img/lifestyle-1.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.variant-1 .tag {
+    background-color: #FF3B30;
+}
+
+.variant-2 {
+    background-image: url("../img/lifestyle-2.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.variant-2 .tag {
+    background-color: #FF9500;
+}
+
+.variant-3 {
+    background-image: url("../img/fashion-1.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+.variant-3 .read-more {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background: none;
+}
+.variant-3 .read-more-btn {
+    background-color: #ff2d20;
+    color: white;
+}
+.variant-3 .read-more-btn:hover{
+    background-color: #ee2c20;
+}
+
+
+.variant-3 .description {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+.variant-3 .header {
+    height: 50%;
+}
+.variant-3>.filter {
+    z-index: 1000;
+    box-shadow: none;
+}
+.variant-3>.content {
+    z-index: 1001;
+}
+
+/*NOTE*/
+.note:before {
+    padding-top: 80%;
+}
+
+.note .content h2 {
+    font-family: "Playfair Display", Raleway, "Helvetica Neue", Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    margin-top: 10px;
+}
+.note .content h4 {
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    color: rgb(154, 154, 154);
+    margin-top: 15px;
+}
+.note .content p {
+    color: rgb(154, 154, 154);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.note-1 {
+    background-color: white;
+}
+.note-1 .content p {
+    font-weight: 300;
+}
+
+.note-2 .content h2, .note-2 .content h4, .note-2 .content p {
+    color: white;
+}
+.note-2 {
+    background: #FF6A27; /* fallback for old browsers */
+    background: -webkit-linear-gradient(135deg, #FFB23B, #FF6A27); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(135deg, #FFB23B, #FF6A27);
+}
+
+
+
+/*shop cards*/
+.shop-card:before {
+    padding-top: 130%;
+}
+
+.shop-card .content .description {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+}
+
+.shop-card .content h2 {
+    text-align: center;
+    color: white;
+    font-weight: 400;
+}
+.shop-card .content .price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+}
+
+.shop-card .content .price div:first-child {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 17.5px;
+    margin-bottom: 10px;
+}
+.shop-card .content .price div:last-child {
+    font-size: 36px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.shop-card .content .price div:last-child span{
+    font-size: 22px;
+    font-weight: 200;
+}
+
+.shop-card .read-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    width: 100%;
+    height: auto;
+}
+.ticket .read-more .read-more-btn {
+    background-color: transparent;
+    color: #e2e2e2;
+    border: 1px solid #e2e2e2;
+}
+.ticket .read-more .read-more-btn:hover {
+    border-color: white;
+    color: white;
+}
+
+.ticket {
+    background-image: url("../img/city-1.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+.ticket>.filter {
+    box-shadow: none;
+    background-color: rgba(104,134,213, .65);
+}
+.ticket:hover>.filter {
+    background-color: rgba(104,134,213, .85);
+}
+.vacation {
+    background-image: url("../img/city-2.png");
+    background-size: cover;
+    background-position: center center;
+}
+.vacation>.filter {
+    box-shadow: none;
+}
+.vacation p {
+    text-align: center;
+    color: white;
+}
+.vacation .read-more .read-more-btn {
+    background-color: #e2e2e2;
+}
+.vacation .read-more .read-more-btn:hover {
+    background-color: white;
+}
